@@ -1,0 +1,36 @@
+TERMINALES:
+
+
+Left Join(PBB)
+
+
+LOAD @1 as Division, 
+     @2 as Subdir, 
+     @3 as Area, 
+     @4 as LIB, 
+     @5 as Distrito, 
+     Left(@5,3)as CTL,
+     @6 as Terminal, 
+     @7 as Inst, 
+     @8 as Servicio, 
+     @9 as Libres, 
+     @10 as Otros, 
+     @11 as FeAparicionDistrito, 
+     @12 as FeAparicionTerminal, 
+     @13 as TerminalCipea,
+     @14 as Fecha_CIPEA_ORIGINAL,
+     (@14-1) as FeAparicionCipea, 
+     Year(@14) as Año,
+     Week((@14-1),5)as NUMSEM,
+//     Week(FeAparicionCipea-1)as NUMSEM,
+     Month(@14-1)as MES_CIPEA,
+//     (@14-1) as FeAparicionCipea,
+     @15 as FeCorte,
+     (@4 & Left(@5,7))as LIB_DTTO,
+     Year(@11) as AÑO_DTTO,
+     Year(@12) as AÑO_TERMINAL
+    
+     
+FROM
+[C:\Users\Lenovo\Documents\RNUM\CIPEA_PISA_TERMINALES\CIPEA_PISA_TERMINALES_PRUEBAS\INSUMOS_TERMINALES_FO\iTerminalesFO_20230222.txt]
+(txt, codepage is 28591, no labels, delimiter is '|', msq);
