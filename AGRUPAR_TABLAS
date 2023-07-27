@@ -1,6 +1,6 @@
+//EJEMPLO PARA AGRUPAR DIMENSIONES EN TABLAS
+
 AVANCE_PBB:
-
-
 left join (TABLA_FINAL)
 
 LOAD  
@@ -18,7 +18,7 @@ LOAD
 
 
 FROM
-[C:\Users\Lenovo\Documents\RNUM\TABLERO DESDE SEMAFORO\Reporte SEM29_2023\REPORTE INTERNO\Reporte_Avance_20072023_INTERNO.xlsx]
+[C:\Users\LeAvance_20072023_INTERNO.xlsx]
 (ooxml, embedded labels, table is Sheet1)
 
 GROUP BY LIB_DTTO ;
