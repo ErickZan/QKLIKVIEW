@@ -1,0 +1,24 @@
+AVANCE_PBB:
+
+
+left join (TABLA_FINAL)
+
+LOAD  
+	 FirstValue(LIB_DTTO) AS LIB_DTTO,
+     FirstValue([ID unico]) as [ID unico],
+     FirstValue([Puertos Programa Autorizado]) as [Puertos Programa Autorizado],
+     FirstValue(Distrito) AS DISTRITO_PBB,
+     FirstValue([Puertos Liberados]) AS PUERTOS_LIBERADOS, 
+     FirstValue([Fecha Navegación]) AS FECHA_NAV,  
+     FirstValue(TERMINALES) AS TERMINALES_PBB,
+     FirstValue(Navegado) AS NAVEGADO,
+     FirstValue(Programa_Homologado2) AS PROGRAMA_PBB
+
+
+
+
+FROM
+[C:\Users\Lenovo\Documents\RNUM\TABLERO DESDE SEMAFORO\Reporte SEM29_2023\REPORTE INTERNO\Reporte_Avance_20072023_INTERNO.xlsx]
+(ooxml, embedded labels, table is Sheet1)
+
+GROUP BY LIB_DTTO ;
